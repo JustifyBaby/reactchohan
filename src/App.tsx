@@ -8,7 +8,8 @@ function App() {
   // 財布とBET額の状態
   const [money, setMoney] = useState<Money>({ wallet: 1500, bet: 0 });
   // いくらかけたか
-  const betRef = useRef<HTMLInputElement>();
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const betRef = useRef<HTMLInputElement | null>(null);
   // サイコロの状態
   const [dices, setDices] = useState<number[]>([]);
   // playerの役
